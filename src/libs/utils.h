@@ -7,3 +7,11 @@ int read_file(char * name, char ** matrix, int * speed);
 
 void print_screen(char ** matrix);
 
+char ** init_matrix(int hight, int width);
+
+void output(char ** matrix);
+
+void replace(char ** matrix);
+
+#endif
+
