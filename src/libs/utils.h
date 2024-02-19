@@ -13,5 +13,7 @@ void output(char ** matrix);
 
 void replace(char ** matrix);
 
+void clear_screen();
+
 #endif
 
