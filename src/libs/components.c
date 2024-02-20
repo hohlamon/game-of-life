@@ -6,19 +6,17 @@
 
 int get_neighbours(int i, int j, char ** matrix){
     int neighboirs = 0;
-    for (int k = 0; k < 3; k++){
+    for (int k = -1; k <= 1; k++){
         if (matrix[transform_edge_y(i-1)][transform_edge_x(j + k)]== '1')
             neighboirs += 1;
     }
-    for (int k = 0; k < 3; k++){
-        if (k == 1)
+    for (int k = -1; k <= 1; k++){
+        if (k == 0)
             continue;
         if (matrix[transform_edge_y(i)][transform_edge_x(j + k)]== '1')
             neighboirs += 1;
     }
-    for (int k = 0; k < 3; k++){
-        if (k == 1)
-            continue;
+    for (int k = -1; k <= 1; k++){
         if (matrix[transform_edge_y(i+1)][transform_edge_x(j + k)]== '1')
             neighboirs += 1;
     }
