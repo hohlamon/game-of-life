@@ -15,5 +15,9 @@ void replace(char ** matrix);
 
 void clear_screen();
 
+void copy_matrix(char ** dest, char ** source);
+
+void sleep(int speed);
+
 #endif
 

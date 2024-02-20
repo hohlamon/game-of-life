@@ -27,18 +27,21 @@ int read_file(char * name, char ** matrix, int * speed){
 void print_screen(char ** matrix){
     for (int i = 0; i < HIGHT; i++){
         for (int j = 0; j < WIDTH; j++){
-            if (j == WIDTH - 1){
-                if (matrix[i][j] == '0')
+            //if (j == WIDTH - 1){
+                /*if (matrix[i][j] == '0')
                     printf(".");
                 else if (matrix[i][j] == '1')
                     printf("*");
-                printf("\n");
+                printf("\n");*/
                 
-            }
-            else if (matrix[i][j] == '0')
+            //}
+            if (matrix[i][j] == '0')
                 printf(".");
             else if (matrix[i][j] == '1')
                 printf("*");
+            if (j == WIDTH - 1){
+                printf("\n");
+            }
 
         }
     }
@@ -81,3 +84,15 @@ void clear_screen(){
     printf("\e[1;1H\e[2J");
 }
 
+void copy_matrix(char ** dest, char ** source){
+    for (int i = 0; i < HIGHT; i++){
+        for (int j = 0; j < WIDTH; j++){
+            dest[i][j] = source[i][j];
+        }
+    }
+}
+
+void sleep(int speed){
+    for(int i = 0; i < 1000000000/speed; i++);
+
+}
