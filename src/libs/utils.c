@@ -18,6 +18,7 @@ int read_file(char * name, char ** matrix, int * speed){
         }
         else
             flag =  0;
+        fclose(fp);
     return flag;
     
 
