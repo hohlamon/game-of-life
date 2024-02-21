@@ -19,5 +19,7 @@ void copy_matrix(char ** dest, char ** source);
 
 void sleep(int speed);
 
+void free_matrix(char ** matrix);
+
 #endif
 

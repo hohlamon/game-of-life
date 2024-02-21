@@ -96,3 +96,9 @@ void sleep(int speed){
     for(int i = 0; i < 1000000000/speed; i++);
 
 }
+void free_matrix(char ** matrix){
+    for(int i = 0; i < HIGHT; i++){
+        free(matrix[i]);
+    }
+    free(matrix);
+}
